@@ -8,5 +8,9 @@ class Blog < ApplicationRecord
 
   belongs_to :topic
 
+  def self.body_preview
+  	self.body.slice(0..350)
+  end
+
 
 end
