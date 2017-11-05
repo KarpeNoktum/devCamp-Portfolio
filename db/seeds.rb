@@ -42,7 +42,7 @@ puts "5 skills created"
 8.times do |portfolio|
 	portfolio += 1
 	Portfolio.create!(
-		title: "Rails Portfolio item #{portfolio}",
+		title: "Portfolio item #{portfolio}",
 		subtitle: "Ruby on Rails",
 		body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
 		main_image:"http://via.placeholder.com/600x400",
@@ -54,9 +54,9 @@ puts "5 skills created"
 end
 
 2.times do |portfolio|
-	portfolio += 1
+	portfolio += 9
 	Portfolio.create!(
-		title: "Angular Portfolio item #{portfolio}",
+		title: "Portfolio item #{portfolio}",
 		subtitle: "Angular",
 		body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
 		main_image:"http://via.placeholder.com/600x400",
@@ -67,15 +67,46 @@ end
 		)
 end
 
-puts "9 Portfolio items created"
+puts "10 Portfolio items created"
 
-3.times do |technology|
-	technology += 1
-	Technology.create!(
-		name: "Technology #{technology}",
-		portfolio_id: Portfolio.last.id
-		)
-end
+
+
+	3.times do |technology|
+		technology += 1
+		Technology.create!(
+			name: "Technology #{technology}",
+			portfolio_id: Portfolio.last.id
+			)
+	end
 
 puts "3 Technologies created"
+
+15.times do |user|
+	user += 1
+	nseed = rand 5
+
+	case nseed
+	when 1
+		rname = "John Smith"
+	when 2
+		rname = "Jane Doe"
+	when 3
+		rname = "Randy Johnson"
+	when 4
+		rname = "Sarah Connor"
+	when 5
+		rname = "Lex Luthor"
+	else 
+		rname = "Lois Lane"
+	end
+
+	User.create!(
+		email: "test#{user}@test.com",
+		password: "tester",
+		name: rname
+		)
+
+end
+
+puts "Test users created"
 
