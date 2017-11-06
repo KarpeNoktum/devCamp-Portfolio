@@ -1,10 +1,12 @@
 class PortfoliosController < ApplicationController
 
 def index
+
 	@portfolio_items = Portfolio.all
 end
 
 def new
+  @page_title = "Josh Beere | New Portfolio Item"
 	@portfolio_item = Portfolio.new
   3.times {@portfolio_item.technologies.build}
 end
@@ -24,6 +26,7 @@ def create
  end
 
  def edit
+  @page_title = "Josh Beere | Edit Portfolio Item"
     @portfolio_item = Portfolio.find(params[:id])
  end
 
@@ -40,6 +43,7 @@ end
 
 def show
   @portfolio_item = Portfolio.find(params[:id])
+  @page_title = "Josh Beere | #{@portfolio_item.title}"
 end
 
 def destroy
