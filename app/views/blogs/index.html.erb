@@ -16,9 +16,8 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
-        <td><%= blog.body.slice(0 .. 350) + "..." %></td>
+        <td><%= blog.body.slice(0 .. 350) + "..." %> <%=link_to 'Read More', blog%></td>
         <td><%= blog.status.slice(0, 1).upcase + blog.status.slice(1..-1) %></td>
-        <td><%= link_to 'Read', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         

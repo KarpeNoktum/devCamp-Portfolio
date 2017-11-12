@@ -3,24 +3,22 @@
   <head>
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-    <link rel = "shortcut icon" href = "@icon" />
+    <link rel = "shortcut icon" href = "<%= @icon %>"
 
-    <meta name = "keywords" content = "<%= @seo_keywords %>"
+    <meta name = "keywords" content = "<%= @seo_keywords %>" />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   </head>
 
   <body>
   	  <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+  
 
-     <div id = "navbar" style="padding-bottom: 15px; display: inline-block;"> 
-       
-      <%= render "shared/nav" %>
-
-      
-      <span><% if current_user.is_a?(User)%>
+       <span><% if current_user.is_a?(User)%>
        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
        <% else %>
        <%= link_to 'Sign In', new_user_session_path %> |
@@ -28,9 +26,16 @@
        <% end %></span>
      </div>
 
-           <hr>
+
+
+
 
     <%= yield %>
+
+    <hr>
+
+    <%= render "shared/nav" %>
+
 
     <% if session[:source] %>
     <p>Thanks for visiting me from <%= session[:source] %></p>
