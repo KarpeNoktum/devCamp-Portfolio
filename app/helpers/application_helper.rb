@@ -11,7 +11,7 @@ module ApplicationHelper
 	def session_msg_helper
 
 	if session[:source]
-    "<p>Thanks for visiting me from #{session[:source]}!</p>".html_safe
+    content_tag(:p, "Thanks for visiting me from #{session[:source]}!", class: "session_msg")
     end
 
 	end
