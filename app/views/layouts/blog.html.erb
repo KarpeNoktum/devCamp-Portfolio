@@ -18,12 +18,7 @@
        <p class="alert"><%= alert %></p>
   
 
-       <span><% if current_user.is_a?(User)%>
-       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-       <% else %>
-       <%= link_to 'Sign In', new_user_session_path %> |
-       <%= link_to 'Sign Up', new_user_registration_path %>
-       <% end %></span>
+       <%= login_helper %>
      </div>
 
 
@@ -37,8 +32,6 @@
     <%= render "shared/nav", location: 'bottom'%>
 
 
-    <% if session[:source] %>
-    <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
+    <%= session_msg_helper %>
   </body>
 </html>
