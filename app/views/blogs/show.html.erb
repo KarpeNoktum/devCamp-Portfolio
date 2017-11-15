@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
+  
+  <h2><%= @blog.title %></h2>
 </p>
 
+<em>Published <%= distance_of_time_in_words(@blog.created_at, Time.now)%> ago</em>
+
 <p>
-  <strong>Body:</strong>
+  
   <%= @blog.body %>
 </p>
 

@@ -12,7 +12,9 @@ module ApplicationHelper
 
 	if session[:source]
     content_tag(:p, "Thanks for visiting me from #{session[:source]}!", class: "session_msg")
-    end
+  end
+
+
 
 	end
 end

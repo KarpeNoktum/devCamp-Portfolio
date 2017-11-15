@@ -8,9 +8,10 @@ class Blog < ApplicationRecord
 
   belongs_to :topic
 
-  def self.body_preview
-  	self.body.slice(0..350)
-  end
+  after_initialize :set_topic
 
+  def set_topic
+  	self.topic_id ||= Topic.find(rand 3).id
+  end
 
 end
