@@ -77,32 +77,3 @@ puts "10 Portfolio items created"
 
 puts "3 Technologies created"
 
-15.times do |user|
-	user += 1
-	nseed = rand 5
-
-	case nseed
-	when 1
-		rname = "John Smith"
-	when 2
-		rname = "Jane Doe"
-	when 3
-		rname = "Randy Johnson"
-	when 4
-		rname = "Sarah Connor"
-	when 5
-		rname = "Lex Luthor"
-	else 
-		rname = "Lois Lane"
-	end
-
-	User.create!(
-		email: "test#{user}@test.com",
-		password: "tester",
-		name: rname
-		)
-
-end
-
-puts "Test users created"
-

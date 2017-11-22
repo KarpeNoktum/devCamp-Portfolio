@@ -1,10 +1,12 @@
       <tr>
+      	<% if logged_in?(:user) && blog.status == "published" || admin %>
         <td><%= blog.title %></td>
         <td>Published <%=distance_of_time_in_words(blog.created_at, Time.now) %> ago </td>
         <%= body_helper(blog) %>
-        <td><%= blog.status.slice(0, 1).upcase + blog.status.slice(1..-1) %></td>
+        <td><%= blog.status.slice(0, 1).upcase + blog.status.slice(1..-1) if admin%></td>
         <td><%= link_to 'Read', blog %>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog) if admin%></td>
+        <td><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } if admin%></td>
+        <%end%>
         
       </tr>
