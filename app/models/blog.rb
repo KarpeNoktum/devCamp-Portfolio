@@ -11,7 +11,7 @@ class Blog < ApplicationRecord
   after_initialize :set_topic
 
   def set_topic
-  	self.topic_id ||= Topic.find(rand 3).id
+  	self.topic_id ||= Topic.find((rand 2) + 1).id
   end
 
 end

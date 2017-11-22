@@ -27,7 +27,11 @@
 
     <%= yield %>
 
-    <%= session_msg_helper %>
+    <%= @copyright %>
+
+    <%= session_msg_helper "application"%>
+
+    <%= copyright_generator %>
     
   </body>
 </html>

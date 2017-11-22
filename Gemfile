@@ -13,6 +13,7 @@ gem 'jquery-rails'
 
 
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -60,3 +61,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #FriendlyID
 gem 'friendly_id', '~> 5.1.0'
+
+gem 'joshs_view_tool', git: "https://github.com/KarpeNoktum/joshs_view_tool"

@@ -8,13 +8,18 @@ module ApplicationHelper
         end
 	end
 
-	def session_msg_helper
+	def session_msg_helper layout
 
-	if session[:source]
-    content_tag(:p, "Thanks for visiting me from #{session[:source]}!", class: "session_msg")
+	  if session[:source]
+      content_tag(:p, "Thanks for visiting me from #{session[:source]}!", class: "#{layout}_session_message")
+    end
+  end
+
+  def copyright_generator
+     JoshsViewTool::Renderer.copyright "Josh Beere", "All rights reserved"
   end
 
 
 
-	end
+	
 end

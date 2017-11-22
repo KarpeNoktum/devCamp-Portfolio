@@ -3,7 +3,7 @@
   <head>
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-    <link rel = "shortcut icon" href = "<%= @icon %>"
+    <link rel = "shortcut icon" href = "<%= @icon %>" />
 
     <meta name = "keywords" content = "<%= @seo_keywords %>" />
 
@@ -32,6 +32,8 @@
     <%= render "shared/nav", location: 'bottom'%>
 
 
-    <%= session_msg_helper %>
+    <%= session_msg_helper "blog"%>
+
+    <%= copyright_generator %>
   </body>
 </html>
