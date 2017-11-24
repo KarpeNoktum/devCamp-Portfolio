@@ -14,26 +14,26 @@
   </head>
 
   <body>
-  	  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
 
-     <div id = "navbar" style="padding-bottom: 15px;"> 
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
        
-    <%= render "shared/nav", location: 'top'%>
+       
+            <%= render "shared/application_nav"%>
 
       
-    <%= login_helper %>
+            <%= login_helper %>
+            
+            <%= yield %>
 
-     </div>
+            <%= copyright_generator %>
 
-
-    <%= yield %>
-
-    <%= @copyright %>
-
-    <%= session_msg_helper "application"%>
-
-    <%= copyright_generator %>
-    
+            <%= session_msg_helper "application"%>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
