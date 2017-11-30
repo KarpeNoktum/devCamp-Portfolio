@@ -11,6 +11,7 @@ a:hover {
   color: #fff;
 }
 
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -26,15 +27,24 @@ a:hover {
  * Base structure
  */
 
+.soc-link{
+  height: 50px;
+  width:50px;
+  color: white;
+}
+
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background: url('http://www.textures4photoshop.com/tex/thumbs/space-background-with-starfield-free-download-thumb45.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -58,6 +68,7 @@ body {
 /* Padding for spacing */
 .inner {
   padding: 2rem;
+  
 }
 
 
@@ -65,8 +76,12 @@ body {
  * Header
  */
 
+
+
+
 .masthead {
   margin-bottom: 2rem;
+
 }
 
 .masthead-brand {
@@ -111,6 +126,8 @@ body {
 }
 
 
+
+
 /*
  * Cover
  */
@@ -124,12 +141,13 @@ body {
 }
 
 
+
 /*
  * Footer
  */
 
 .mastfoot {
-  color: rgba(255,255,255,.5);
+  color: white;
 }
 
 
@@ -144,7 +162,7 @@ body {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    position: absolute;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -166,3 +184,78 @@ body {
     width: 55rem;
   }
 }
+
+
+/*
+ * Custom Styles
+ */
+
+ /* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+::-webkit-scrollbar-track{
+  display:none;
+  }
+
+::-webkit-scrollbar-thumb{
+  background: white;
+  border-radius:25px;
+}
+
+/* Contact/about page */
+
+#about-image{
+  height: 300px;
+  width:300px;
+  padding: 2px;
+  border: 1px solid white;
+}
+
+
+.page-container{
+  background-color:rgba(51, 51, 51, 0.5);
+  padding: 25px;
+  border-radius: 7px;
+  overflow-y:hidden;
+  min-height:490px;
+  max-height: 490px;
+
+}
+
+.page-container:hover{
+  overflow-y:auto;
+ }
+
+
+.page-content{
+
+  max-height: 100%;
+  
+  opacity: 1;
+  
+}
+
+/* Registration pages */
+
+.card{
+  padding:15px;
+  border-radius: 7px;
+  background-color: rgba(51,51,51, 0.5);
+  font-size: 1em;
+}
+
+.card-block{
+  text-align:left;
+}
+
+#cancel{
+  margin-top:19%;
+}
+
+
+
+

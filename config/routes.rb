@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  get 'test', to: 'pages#test_page'
 
 
 
