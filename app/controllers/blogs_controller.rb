@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status, :preview] 
+  before_action :new_button, except: [:index]
   layout "blog"
   access all: [:show, :index], user: {except: [:destroy, :create, :new, :edit, :update]}, site_admin: :all
   # GET /blogs
@@ -93,6 +94,10 @@ class BlogsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:title, :body)
+    end
+
+    def new_button
+      @button = "disappear"
     end
   end
 

@@ -1,12 +1,18 @@
-      <tr>
+
       	<% if logged_in?(:user) && blog.status == "published" || admin %>
-        <td><%= blog.title %></td>
-        <td>Published <%=distance_of_time_in_words(blog.created_at, Time.now) %> ago </td>
-        <%= body_helper(blog) %>
-        <td><%= blog.status.slice(0, 1).upcase + blog.status.slice(1..-1) if admin%></td>
-        <td><%= link_to 'Read', blog %>
-        <td><%= link_to 'Edit', edit_blog_path(blog) if admin%></td>
-        <td><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } if admin%></td>
+            <h2 class="blog-post-title"><%= blog.title %></h2>
+
+
+            <em class="blog-post-meta">Published <%=distance_of_time_in_words(blog.created_at, Time.now)%> ago</em>
+
+            <p><%= body_helper(blog) %></p>
+
+            <p><%= link_to 'Read More', blog, class: "btn btn-outline-primary" %> &nbsp; <%= link_to 'Edit', edit_blog_path(blog), class: "btn btn-outline-success" if admin%> &nbsp; <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" if admin%></p>
+
+            <p><%= blog.status if admin%></p>
+
+
+        
         <%end%>
         
       </tr>

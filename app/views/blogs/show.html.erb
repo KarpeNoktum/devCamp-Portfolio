@@ -1,7 +1,6 @@
-<p id="notice"><%= notice %></p>
 
+<div class = "col-md-9">
 <p>
-  
   <h2><%= @blog.title %></h2>
 </p>
 
@@ -12,6 +11,8 @@
   <%= @blog.body %>
 </p>
 
-<%= link_to 'Edit', edit_blog_path(@blog) if admin %> 
-<%= link_to 'Back', :back %>
+<%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-outline-success" if admin %> 
+<%= link_to 'Back', :back, class: "btn btn-outline-secondary" %>
+
+</div>
 
