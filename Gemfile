@@ -11,7 +11,9 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'jquery-rails'
 
+gem "font-awesome-rails"
 
+gem 'kaminari'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

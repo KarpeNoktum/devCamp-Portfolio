@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "font-awesome";
+
 
 /*
  * Globals
@@ -172,5 +174,16 @@ h6, .h6 {
 .disappear{
   display:none;
 }
+
+.text-field{
+  min-height: 300px;
+}
+
+.sidebar_icon{
+  font-size: 4em;
+  color: black;
+}
+
+
 
 

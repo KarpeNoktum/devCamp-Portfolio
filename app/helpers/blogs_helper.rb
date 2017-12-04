@@ -7,4 +7,8 @@ module BlogsHelper
     end
   end
 
+  def published_time (blog)
+  	distance_of_time_in_words(blog.created_at, Time.now)
+  end
+
 end

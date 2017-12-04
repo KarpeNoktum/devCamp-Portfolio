@@ -1,7 +1,10 @@
+<div class = 'col-sm-8'>
+
 <h1>Edit Blog</h1>
 
-<%= render 'form', blog: @blog %>
+<%= render 'form', blog: @blog, button_text: 'Update' %>
 
-<%= link_to 'Show', @blog %> |
 <%= link_to 'Back', blogs_path %> |
 <%= link_to @blog.status.slice(0, 1).upcase + @blog.status.slice(1..-1), toggle_status_blog_path %>
+
+</div>

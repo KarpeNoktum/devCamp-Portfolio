@@ -1,4 +1,6 @@
-             <nav class="nav blog-nav">
+    <div class="blog-masthead">
+        <div class="container">
+              <nav class="nav blog-nav">
                  <%= link_to "Home", root_path, class: @home || 'nav-link'%> 
                  <%= link_to "About", about_me_path, class: @about || 'nav-link' %>
                  <%= link_to "Contact", contact_path, class: @contact || 'nav-link' %>
@@ -6,5 +8,5 @@
                  <%= link_to "Portfolio", portfolios_path, class: 'nav-link' %> 
                  <%= login_helper "nav-link"%>
               </nav>
-            </div>
-          </div>
+        </div>
+    </div>

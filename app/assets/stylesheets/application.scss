@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 /*
  * Globals
@@ -28,9 +29,9 @@ a:hover {
  */
 
 .soc-link{
-  height: 50px;
-  width:50px;
+  font-size: 2.5em;
   color: white;
+  margin-top: 10px;
 }
 
 html,

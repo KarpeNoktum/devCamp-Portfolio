@@ -14,4 +14,12 @@ class Blog < ApplicationRecord
   	self.topic_id ||= Topic.find((rand 2) + 1).id
   end
 
+  def draft_blogs
+    where(self.status = 'draft')
+  end
+
+  def published_blogs
+    where(self.status = 'published')
+  end
+
 end
